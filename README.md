@@ -1,4 +1,4 @@
-# Laeringsmaal for datamatiker 1 semester
+# Applikation for læringsmaal for datamatikere på 1. semester
 
 Denne demo-app illustrerer følgende koncepter:
 
