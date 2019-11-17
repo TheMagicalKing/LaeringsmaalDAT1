@@ -9,7 +9,7 @@ Denne demo-app illustrerer følgende koncepter:
 5. MVC design pattern, hvor gui, database og logik er adskilt.
 
 
-!(MVC)[https://developer.mozilla.org/en-US/docs/Glossary/MVC]
+![https://developer.mozilla.org/en-US/docs/Glossary/MVC](MVC)
 
 # Opgaver
 Løsningen indeholder en del fejl... kan du fange dem med tests (eller uden), og fikse dem? 
