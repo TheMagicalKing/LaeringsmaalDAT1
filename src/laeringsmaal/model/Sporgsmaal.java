@@ -26,12 +26,12 @@ public class Sporgsmaal {
         return alleSporgsmaal;
     }
 
-    public String getSporgsmaal(int i) {
-        return alleSporgsmaal.get(i);
+    public String getSporgsmaal(int j) {
+        return alleSporgsmaal.get(j);
     }
 
-    public void setSporgsmaal(int i, String sporgsmaal) {
-        alleSporgsmaal.add(i, sporgsmaal);
+    public void setSporgsmaal(int j, String sporgsmaal) {
+        alleSporgsmaal.add(j, sporgsmaal);
     }
 
 }
