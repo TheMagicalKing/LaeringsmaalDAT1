@@ -7,12 +7,12 @@ import model.Sporgsmaal;
 
 public class LaeringsmaalController {
 
-    private int i1 = 0;
-    private int j1 = 0;
+    private int emneCounter = 0;
+    private int qCounter = 0;
     Emner emner = new Emner();
     Sporgsmaal q = new Sporgsmaal();
-    private int j2 = q.getAlleSporgsmaal().size();
-    private int i2 = emner.getEmner().length;
+    private int qAntal = q.getAlleSporgsmaal().size();
+    private int emneAntal = emner.getEmner().length;
 
     @FXML
     TextField emneTextField;
@@ -22,34 +22,40 @@ public class LaeringsmaalController {
 
     @FXML
     private void indlaes() {
-        if (i1>=0 || i1<=i2){
-        System.out.println(emner.getEmne(i1));
-        emneTextField.setText(emner.getEmne(i1));
-        if (j1>=0||j1<j2) {
-            spoergsmaalTextArea.setText(q.getSporgsmaal(j1) + "\n");
+        if (emneCounter >=0 || emneCounter <= emneAntal){
+        System.out.println(emner.getEmne(emneCounter));
+        emneTextField.setText(emner.getEmne(emneCounter));
+        if (qCounter >=0|| qCounter < qAntal) {
+            spoergsmaalTextArea.setText(q.getSporgsmaal(qCounter) + "\n");
         }
         }
     }
 
     @FXML
     private void naeste() {
-        if (j1<j2-1){
-        i1++;
-        j1++;
+        if (qCounter < qAntal -1){
+        emneCounter++;
+        qCounter++;
+        System.out.println(emneCounter);
+            System.out.println(qCounter);
         indlaes();}
+
     }
 
     @FXML
     private void forrige() {
-        if (i1>0 && j1>0){
-        i1--;
-        j1--;
+        if (emneCounter >0 && qCounter >0){
+        emneCounter--;
+        qCounter--;
         indlaes();}
+        System.out.println(emneCounter);
+        System.out.println(qCounter);
     }
     @FXML
     private void gem(){
-        emner.setEmne(i1,emneTextField.getText());
-        q.setSporgsmaal(j1,spoergsmaalTextArea.getText());
+        System.out.println(emneCounter + "," + qCounter);
+        emner.setEmne(emneCounter,emneTextField.getText());
+        q.setSporgsmaal(qCounter,spoergsmaalTextArea.getText());
     }
 
 }
