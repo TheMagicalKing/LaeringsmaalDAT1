@@ -31,7 +31,7 @@ public class Sporgsmaal {
     }
 
     public void setSporgsmaal(int j, String sporgsmaal) {
-        alleSporgsmaal.add(j, sporgsmaal);
+        alleSporgsmaal.set(j, sporgsmaal);
     }
 
 }
